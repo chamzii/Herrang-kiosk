@@ -33,15 +33,6 @@ const dishes = [
     emoji: "🥢",
   },
   {
-    name: "Chow Mein",
-    desc: "Classic egg noodles stir-fried with your choice of protein, fresh veg, and sesame.",
-    price: "140kr",
-    tag: null,
-    color: "from-yellow-900/40 to-amber-950/30",
-    image: null,
-    emoji: "🍜",
-  },
-  {
     name: "Fried Rice",
     desc: "Golden wok-fried rice with egg, spring onion, soy, and your choice of protein.",
     price: "148kr",

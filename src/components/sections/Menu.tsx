@@ -104,19 +104,6 @@ const categories = [
     ],
   },
   {
-    id: "noodles",
-    label: "🍜 Noodles",
-    items: [
-      {
-        name: "Chow Mein",
-        desc: "Classic stir-fried noodles with your choice of protein",
-        price: "140kr",
-        options: "Chicken / Prawns · Egg Noodles / Vermicelli",
-        vegan: false,
-      },
-    ],
-  },
-  {
     id: "sides",
     label: "🫓 Sides",
     items: [
