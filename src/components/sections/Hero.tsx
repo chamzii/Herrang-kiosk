@@ -105,19 +105,6 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Floating dishes decoration */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.3, duration: 1 }}
-          className="mt-16 flex items-center justify-center gap-8 text-mist/40"
-        >
-          {["Butter Chicken", "·", "Biryani", "·", "Chow Mein", "·", "Fried Rice"].map((t, i) => (
-            <span key={i} className={`font-body text-xs tracking-widest uppercase ${t === "·" ? "text-ember/40" : ""}`}>
-              {t}
-            </span>
-          ))}
-        </motion.div>
       </motion.div>
 
       {/* Scroll indicator */}
