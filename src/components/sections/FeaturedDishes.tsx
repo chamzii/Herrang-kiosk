@@ -47,7 +47,7 @@ const dishes = [
     price: "148kr",
     tag: "New",
     color: "from-cyan-900/40 to-blue-950/30",
-    image: null,
+    image: "/images/dish-calamari.jpg",
     emoji: "🦑",
   },
   {
