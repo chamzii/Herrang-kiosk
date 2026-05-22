@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Star } from "lucide-react";
@@ -37,7 +38,7 @@ const dishes = [
     price: "140kr",
     tag: null,
     color: "from-yellow-900/40 to-amber-950/30",
-    image: "/images/dish-chow-mein.jpg",
+    image: null,
     emoji: "🍜",
   },
   {
@@ -55,7 +56,7 @@ const dishes = [
     price: "148kr",
     tag: "New",
     color: "from-cyan-900/40 to-blue-950/30",
-    image: "/images/dish-calamari.jpg",
+    image: null,
     emoji: "🦑",
   },
   {
@@ -102,16 +103,21 @@ export default function FeaturedDishes() {
               {/* Image area */}
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-charcoal/60 to-ink/80" />
-                {/* Image — replace div with <Image> when photos are added */}
-                <div className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
-                  style={{ backgroundImage: `url(${dish.image})` }}
-                />
-                {/* Emoji placeholder visible until real image is added */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-6xl opacity-30 group-hover:opacity-50 group-hover:scale-110 transition-all duration-500 select-none">
-                    {dish.emoji}
-                  </span>
-                </div>
+                {dish.image ? (
+                  <Image
+                    src={dish.image}
+                    alt={dish.name}
+                    fill
+                    className="object-cover object-center opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-6xl opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-500 select-none">
+                      {dish.emoji}
+                    </span>
+                  </div>
+                )}
 
                 {/* Tag */}
                 {dish.tag && (
