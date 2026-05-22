@@ -23,7 +23,7 @@ const categories = [
         price: "150kr",
         options: null,
         vegan: false,
-        image: null,
+        image: "/images/dish-orange-chicken.jpg",
       },
       {
         name: "Munch Box",
@@ -67,7 +67,7 @@ const categories = [
         price: "140kr",
         options: "With Garlic Rice / Plain Rice / Garlic Cilantro Fries / Plain Fries",
         vegan: true,
-        image: null,
+        image: "/images/dish-vegan-curry.jpg",
       },
     ],
   },
@@ -81,7 +81,7 @@ const categories = [
         price: "145kr",
         options: "With Cashew and Raisins",
         vegan: true,
-        image: null,
+        image: "/images/dish-veg-biryani.jpg",
       },
       {
         name: "Chicken Biryani",
