@@ -1,7 +1,8 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Flame, Leaf, Clock, MapPin } from "lucide-react";
+import { Leaf, Clock, MapPin, Flame } from "lucide-react";
 
 const pillars = [
   {
@@ -43,24 +44,33 @@ export default function About() {
             transition={{ duration: 0.9 }}
             className="relative"
           >
-            {/* Main image */}
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/5] img-zoom">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1a0e05] to-[#2d1505]" />
-              {/* Replace with: <Image src="/images/about-main.jpg" fill alt="Our kitchen" className="object-cover" /> */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 rounded-full bg-ember/20 border border-ember/30 flex items-center justify-center mx-auto mb-4">
-                    <Flame size={40} className="text-ember" />
-                  </div>
-                  <p className="font-accent text-cream/40 italic text-sm">
-                    Place your food photo here
-                  </p>
-                  <p className="font-body text-mist/30 text-xs mt-1">
-                    /public/images/about-main.jpg
-                  </p>
+            {/* Food photo collage */}
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/5]">
+              <div className="grid grid-cols-3 grid-rows-3 h-full gap-1">
+                {/* Large featured — spans 2 cols × 2 rows */}
+                <div className="col-span-2 row-span-2 relative overflow-hidden">
+                  <Image src="/images/dish-butter-chicken.jpg" fill alt="Butter Chicken" className="object-cover hover:scale-105 transition-transform duration-700" sizes="50vw" />
+                </div>
+                {/* Small top-right */}
+                <div className="relative overflow-hidden">
+                  <Image src="/images/dish-biryani.jpg" fill alt="Biryani" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                </div>
+                {/* Small middle-right */}
+                <div className="relative overflow-hidden">
+                  <Image src="/images/dish-samosa.jpg" fill alt="Samosa" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                </div>
+                {/* Bottom row — 3 equal */}
+                <div className="relative overflow-hidden">
+                  <Image src="/images/dish-stir-fry.jpg" fill alt="Stir Fry" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                </div>
+                <div className="relative overflow-hidden">
+                  <Image src="/images/dish-fried-rice.jpg" fill alt="Fried Rice" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                </div>
+                <div className="relative overflow-hidden">
+                  <Image src="/images/dish-calamari.jpg" fill alt="Calamari" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
                 </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Floating stat card */}
