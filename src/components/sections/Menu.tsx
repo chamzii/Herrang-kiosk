@@ -121,6 +121,13 @@ const categories = [
         options: "500ml",
         vegan: false,
       },
+      {
+        name: "Mango Lassi",
+        desc: "Refreshing blend of sweet mango and creamy yoghurt",
+        price: "50kr",
+        options: "500ml",
+        vegan: false,
+      },
     ],
   },
   {
