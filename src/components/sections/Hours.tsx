@@ -61,7 +61,7 @@ export default function Hours() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-14 glass-warm rounded-3xl p-8 md:p-12 relative overflow-hidden"
+          className="mt-14 glass-warm rounded-3xl p-10 md:p-16 relative overflow-hidden"
         >
           {/* Background decorative element */}
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-ember/10 blur-[80px] pointer-events-none" />
@@ -96,13 +96,13 @@ export default function Hours() {
                     <Clock size={16} className={s.isWeekend ? "text-ember" : "text-mist"} />
                   </div>
                   <div>
-                    <p className="font-body font-semibold text-cream">{s.days}</p>
+                    <p className="font-body font-semibold text-cream text-lg">{s.days}</p>
                     {s.isWeekend && (
                       <p className="font-body text-ember text-xs mt-0.5">Extended hours</p>
                     )}
                   </div>
                 </div>
-                <p className={`font-display text-xl font-bold ${s.isWeekend ? "text-gold" : "text-cream/80"}`}>
+                <p className={`font-display text-3xl font-bold ${s.isWeekend ? "text-gold" : "text-cream/80"}`}>
                   {s.hours}
                 </p>
               </motion.div>
