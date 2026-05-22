@@ -149,6 +149,14 @@ const categories = [
         vegan: false,
         image: null,
       },
+      {
+        name: "Iced Chai Latte",
+        desc: "Spiced chai tea blended with milk and poured over ice",
+        price: "40kr",
+        options: null,
+        vegan: false,
+        image: null,
+      },
     ],
   },
   {
