@@ -49,25 +49,22 @@ export default function About() {
               <div className="grid grid-cols-3 grid-rows-3 h-full gap-1">
                 {/* Large featured — spans 2 cols × 2 rows */}
                 <div className="col-span-2 row-span-2 relative overflow-hidden">
-                  <Image src="/images/dish-butter-chicken.jpg" fill alt="Butter Chicken" className="object-cover hover:scale-105 transition-transform duration-700" sizes="50vw" />
-                </div>
-                {/* Small top-right */}
-                <div className="relative overflow-hidden">
-                  <Image src="/images/dish-biryani.jpg" fill alt="Biryani" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
-                </div>
-                {/* Small middle-right */}
-                <div className="relative overflow-hidden">
-                  <Image src="/images/dish-samosa.jpg" fill alt="Samosa" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
-                </div>
-                {/* Bottom row — 3 equal */}
-                <div className="relative overflow-hidden">
-                  <Image src="/images/dish-stir-fry.jpg" fill alt="Stir Fry" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                  <Image src="/images/dish-butter-chicken.jpg" fill alt="" className="object-cover hover:scale-105 transition-transform duration-700" sizes="50vw" />
                 </div>
                 <div className="relative overflow-hidden">
-                  <Image src="/images/dish-fried-rice.jpg" fill alt="Fried Rice" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                  <Image src="/images/dish-biryani.jpg" fill alt="" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
                 </div>
                 <div className="relative overflow-hidden">
-                  <Image src="/images/dish-calamari.jpg" fill alt="Calamari" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                  <Image src="/images/dish-samosa.jpg" fill alt="" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                </div>
+                <div className="relative overflow-hidden">
+                  <Image src="/images/dish-stir-fry.jpg" fill alt="" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                </div>
+                <div className="relative overflow-hidden">
+                  <Image src="/images/dish-fried-rice.jpg" fill alt="" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
+                </div>
+                <div className="relative overflow-hidden">
+                  <Image src="/images/dish-calamari.jpg" fill alt="" className="object-cover hover:scale-105 transition-transform duration-700" sizes="25vw" />
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent pointer-events-none" />
