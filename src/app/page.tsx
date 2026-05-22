@@ -6,7 +6,6 @@ import Menu from "@/components/sections/Menu";
 import Reviews from "@/components/sections/Reviews";
 import Hours from "@/components/sections/Hours";
 import Map from "@/components/sections/Map";
-import InstagramSection from "@/components/sections/Instagram";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/ui/ScrollProgress";
@@ -25,7 +24,6 @@ export default function Home() {
         <Reviews />
         <Hours />
         <Map />
-        <InstagramSection />
         <Contact />
       </main>
       <Footer />
