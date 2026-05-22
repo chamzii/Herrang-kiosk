@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -14,6 +15,7 @@ const categories = [
         price: "148kr",
         options: null,
         vegan: false,
+        image: null,
       },
       {
         name: "Orange Chicken with Rice",
@@ -21,6 +23,7 @@ const categories = [
         price: "150kr",
         options: null,
         vegan: false,
+        image: null,
       },
     ],
   },
@@ -34,6 +37,7 @@ const categories = [
         price: "148kr",
         options: "With Garlic Cilantro Fries / Plain Fries / Egg Fried Rice",
         vegan: false,
+        image: "/images/dish-calamari.jpg",
       },
     ],
   },
@@ -47,6 +51,7 @@ const categories = [
         price: "140kr",
         options: "With Garlic Rice / Plain Rice / Garlic Cilantro Fries / Plain Fries",
         vegan: false,
+        image: "/images/dish-butter-chicken.jpg",
       },
       {
         name: "Vegan Curry",
@@ -54,6 +59,7 @@ const categories = [
         price: "140kr",
         options: "With Garlic Rice / Plain Rice / Garlic Cilantro Fries / Plain Fries",
         vegan: true,
+        image: null,
       },
     ],
   },
@@ -67,6 +73,7 @@ const categories = [
         price: "145kr",
         options: "With Cashew and Raisins",
         vegan: true,
+        image: null,
       },
       {
         name: "Chicken Biryani",
@@ -74,6 +81,7 @@ const categories = [
         price: "145kr",
         options: "With Cashew and Raisins",
         vegan: false,
+        image: "/images/dish-biryani.jpg",
       },
     ],
   },
@@ -87,6 +95,7 @@ const categories = [
         price: "145kr",
         options: "With Fried Egg",
         vegan: false,
+        image: "/images/dish-nasigoreng.jpg",
       },
       {
         name: "Fried Rice",
@@ -94,6 +103,7 @@ const categories = [
         price: "148kr",
         options: "Veg / Beef / Pork / Chicken / Prawns / Egg / Mixed",
         vegan: false,
+        image: "/images/dish-fried-rice.jpg",
       },
     ],
   },
@@ -107,6 +117,7 @@ const categories = [
         price: "148kr",
         options: "Pork / Beef / Chicken / Prawns — served with Egg Fried Rice",
         vegan: false,
+        image: "/images/dish-stir-fry.jpg",
       },
     ],
   },
@@ -120,6 +131,7 @@ const categories = [
         price: "50kr",
         options: "500ml",
         vegan: false,
+        image: null,
       },
       {
         name: "Mango Lassi",
@@ -127,6 +139,7 @@ const categories = [
         price: "50kr",
         options: "500ml",
         vegan: false,
+        image: null,
       },
     ],
   },
@@ -140,6 +153,7 @@ const categories = [
         price: "13kr",
         options: null,
         vegan: true,
+        image: null,
       },
       {
         name: "Samosa (10 pcs)",
@@ -147,6 +161,7 @@ const categories = [
         price: "35kr",
         options: "Small, 10 pieces",
         vegan: true,
+        image: "/images/dish-samosa.jpg",
       },
     ],
   },
@@ -210,38 +225,54 @@ export default function Menu() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="group glass rounded-2xl p-6 hover:border-ember/20 transition-all duration-300 hover:bg-white/[0.03]"
+                  className="group glass rounded-2xl overflow-hidden hover:border-ember/20 transition-all duration-300 hover:bg-white/[0.03]"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h3 className="font-display text-cream text-xl font-bold group-hover:text-gold transition-colors duration-300">
-                          {item.name}
-                        </h3>
-                        {item.vegan && (
-                          <span className="text-[10px] font-body tracking-widest uppercase bg-jade/30 border border-green-700/30 text-green-400 px-2 py-0.5 rounded-full">
-                            Vegan
-                          </span>
+                  {/* Image banner */}
+                  {item.image && (
+                    <div className="relative w-full h-40 overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent" />
+                    </div>
+                  )}
+
+                  <div className="p-6">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="font-display text-cream text-xl font-bold group-hover:text-gold transition-colors duration-300">
+                            {item.name}
+                          </h3>
+                          {item.vegan && (
+                            <span className="text-[10px] font-body tracking-widest uppercase bg-jade/30 border border-green-700/30 text-green-400 px-2 py-0.5 rounded-full">
+                              Vegan
+                            </span>
+                          )}
+                        </div>
+                        <p className="mt-1.5 font-body text-mist text-sm leading-relaxed">
+                          {item.desc}
+                        </p>
+                        {item.options && (
+                          <p className="mt-2 font-body text-ember/70 text-xs italic">
+                            {item.options}
+                          </p>
                         )}
                       </div>
-                      <p className="mt-1.5 font-body text-mist text-sm leading-relaxed">
-                        {item.desc}
-                      </p>
-                      {item.options && (
-                        <p className="mt-2 font-body text-ember/70 text-xs italic">
-                          {item.options}
-                        </p>
-                      )}
+                      <div className="shrink-0 text-right">
+                        <span className="font-display text-gold font-bold text-2xl">
+                          {item.price}
+                        </span>
+                      </div>
                     </div>
-                    <div className="shrink-0 text-right">
-                      <span className="font-display text-gold font-bold text-2xl">
-                        {item.price}
-                      </span>
-                    </div>
-                  </div>
 
-                  {/* Decorative bottom line */}
-                  <div className="mt-4 h-px bg-gradient-to-r from-transparent via-ember/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    {/* Decorative bottom line */}
+                    <div className="mt-4 h-px bg-gradient-to-r from-transparent via-ember/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
