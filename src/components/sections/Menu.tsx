@@ -15,6 +15,13 @@ const categories = [
         options: null,
         vegan: false,
       },
+      {
+        name: "Orange Chicken with Rice",
+        desc: "Crispy chicken tossed in a sweet and tangy orange sauce, served with steamed rice",
+        price: "150kr",
+        options: null,
+        vegan: false,
+      },
     ],
   },
   {
