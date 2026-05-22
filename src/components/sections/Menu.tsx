@@ -25,6 +25,14 @@ const categories = [
         vegan: false,
         image: null,
       },
+      {
+        name: "Munch Box",
+        desc: "A hearty box packed with a selection of our best dishes — perfect for a satisfying meal",
+        price: "145kr",
+        options: null,
+        vegan: false,
+        image: null,
+      },
     ],
   },
   {
