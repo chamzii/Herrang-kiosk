@@ -3,7 +3,6 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import FeaturedDishes from "@/components/sections/FeaturedDishes";
 import Menu from "@/components/sections/Menu";
-import Gallery from "@/components/sections/Gallery";
 import Hours from "@/components/sections/Hours";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
@@ -19,7 +18,6 @@ export default function Home() {
         <About />
         <FeaturedDishes />
         <Menu />
-        <Gallery />
         <Hours />
         <Contact />
       </main>
