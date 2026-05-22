@@ -41,9 +41,9 @@ export default function Navbar() {
             <div className="w-8 h-8 relative">
               <div className="absolute inset-0 rounded-full bg-ember opacity-20 group-hover:opacity-40 transition-opacity" />
               <svg viewBox="0 0 32 32" fill="none" className="w-8 h-8">
-                <circle cx="16" cy="16" r="15" stroke="#c8601a" strokeWidth="1" />
-                <path d="M10 22 Q16 8 22 22" stroke="#d4a843" strokeWidth="1.5" fill="none" />
-                <circle cx="16" cy="12" r="2" fill="#c8601a" />
+                <circle cx="16" cy="16" r="15" stroke="#C41E3A" strokeWidth="1" />
+                <path d="M10 22 Q16 8 22 22" stroke="#C8A84B" strokeWidth="1.5" fill="none" />
+                <circle cx="16" cy="12" r="2" fill="#C41E3A" />
               </svg>
             </div>
             <div>

@@ -17,29 +17,40 @@ export default function Hero() {
     >
       {/* Parallax background */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
-        {/* Deep gradient fallback */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0e05] via-[#0a0805] to-[#0f0904]" />
+        {/* Deep gradient — cool ink-blue-black */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0510] via-[#07050A] to-[#080514]" />
 
-        {/* Decorative bokeh orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-ember/8 blur-[120px] animate-float" />
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-gold/6 blur-[100px] animate-float-delayed" />
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 rounded-full bg-saffron/5 blur-[80px] animate-float-slow" />
+        {/* Bokeh orbs — red, gold, jade */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-ember/10 blur-[120px] animate-float" />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-gold/8 blur-[100px] animate-float-delayed" />
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 rounded-full bg-jade/8 blur-[80px] animate-float-slow" />
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 rounded-full bg-sakura/5 blur-[90px] animate-float-delayed" />
 
-        {/* Food image placeholder — replace with your actual image */}
-        <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-30 mix-blend-luminosity" />
+        {/* Food image */}
+        <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-25 mix-blend-luminosity" />
       </motion.div>
 
       {/* Overlay gradients */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-t from-ink via-ink/60 to-ink/20" />
       <div className="absolute inset-0 z-[1] bg-gradient-to-r from-ink/80 via-transparent to-ink/40" />
 
-      {/* Decorative pattern */}
-      <div className="absolute inset-0 z-[1] opacity-5"
-        style={{
-          backgroundImage: `radial-gradient(circle, #d4a843 1px, transparent 1px)`,
-          backgroundSize: "48px 48px",
-        }}
-      />
+      {/* Seigaiha wave-scale pattern */}
+      <div className="seigaiha absolute inset-0 z-[1] opacity-[0.04]" />
+
+      {/* Floating sakura petals */}
+      <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
+        {[8, 20, 33, 46, 57, 68, 78, 88].map((left, i) => (
+          <div
+            key={i}
+            className="petal"
+            style={{
+              left: `${left}%`,
+              animationDelay: `${i * 1.3}s`,
+              animationDuration: `${9 + i * 1.2}s`,
+            }}
+          />
+        ))}
+      </div>
 
       {/* Content */}
       <motion.div
