@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 :root {
-  --ink: #0a0805;
-  --charcoal: #111009;
-  --ember: #c8601a;
-  --gold: #d4a843;
-  --saffron: #e8821a;
-  --cream: #f2e8d5;
-  --parchment: #ede0c4;
-  --mist: #8a7a6a;
+  --ink: #080604;
+  --charcoal: #0f0d08;
+  --ember: #e05515;
+  --gold: #f0b830;
+  --saffron: #f09020;
+  --cream: #f8eedc;
+  --parchment: #f0e2c4;
+  --mist: #9a8878;
 }
 
 * {
@@ -26,8 +26,8 @@ html {
 }
 
 body {
-  background-color: #0a0805;
-  color: #f2e8d5;
+  background-color: #080604;
+  color: #f8eedc;
   font-family: 'Jost', sans-serif;
   overflow-x: hidden;
 }
@@ -37,10 +37,10 @@ body {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0805;
+  background: #080604;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c8601a;
+  background: #e05515;
   border-radius: 2px;
 }
 
@@ -50,7 +50,7 @@ body {
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #c8601a, #d4a843, #e8821a);
+  background: linear-gradient(90deg, #e05515, #f0b830, #f09020);
   z-index: 9999;
   transition: width 0.1s;
 }
@@ -84,10 +84,10 @@ body::before {
 .text-shimmer {
   background: linear-gradient(
     90deg,
-    #d4a843 0%,
-    #f2e8d5 40%,
-    #e8821a 60%,
-    #d4a843 100%
+    #f0b830 0%,
+    #f8eedc 40%,
+    #f09020 60%,
+    #f0b830 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -149,5 +149,5 @@ body::before {
   content: '';
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #c8601a44);
+  background: linear-gradient(90deg, transparent, #e0551544);
 }
