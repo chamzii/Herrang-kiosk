@@ -15,7 +15,7 @@ const categories = [
         price: "148kr",
         options: null,
         vegan: false,
-        image: null,
+        image: "/images/dish-popcorn-chicken.jpg",
       },
       {
         name: "Orange Chicken with Rice",
@@ -31,7 +31,7 @@ const categories = [
         price: "145kr",
         options: null,
         vegan: false,
-        image: null,
+        image: "/images/dish-munch-box.jpg",
       },
     ],
   },
@@ -139,7 +139,7 @@ const categories = [
         price: "50kr",
         options: "500ml",
         vegan: false,
-        image: null,
+        image: "/images/dish-espresso-milkshake.jpg",
       },
       {
         name: "Mango Lassi",
@@ -147,7 +147,7 @@ const categories = [
         price: "50kr",
         options: "500ml",
         vegan: false,
-        image: null,
+        image: "/images/dish-mango-lassi.jpg",
       },
       {
         name: "Iced Chai Latte",
@@ -155,7 +155,7 @@ const categories = [
         price: "40kr",
         options: null,
         vegan: false,
-        image: null,
+        image: "/images/dish-iced-chai-latte.jpg",
       },
     ],
   },
@@ -169,7 +169,7 @@ const categories = [
         price: "13kr",
         options: null,
         vegan: true,
-        image: null,
+        image: "/images/dish-naan.jpg",
       },
       {
         name: "Samosa (10 pcs)",
