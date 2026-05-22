@@ -103,7 +103,7 @@ export default function FeaturedDishes() {
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-charcoal/60 to-ink/80" />
                 {/* Image — replace div with <Image> when photos are added */}
-                <div className="absolute inset-0 bg-[var(--img)] bg-cover bg-center opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
+                <div className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
                   style={{ backgroundImage: `url(${dish.image})` }}
                 />
                 {/* Emoji placeholder visible until real image is added */}
