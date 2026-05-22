@@ -111,6 +111,19 @@ const categories = [
     ],
   },
   {
+    id: "drinks",
+    label: "🥤 Drinks",
+    items: [
+      {
+        name: "Espresso Milkshake",
+        desc: "Rich espresso blended into a creamy milkshake",
+        price: "50kr",
+        options: "500ml",
+        vegan: false,
+      },
+    ],
+  },
+  {
     id: "sides",
     label: "🫓 Sides",
     items: [
